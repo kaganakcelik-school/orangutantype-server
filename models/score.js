@@ -14,7 +14,8 @@ mongoose.connect(url)
 	})
 
 const scoreSchema = new mongoose.Schema({
-	score: Number
+	score: Number,
+	name: String
 })
 
 scoreSchema.set('toJSON', {

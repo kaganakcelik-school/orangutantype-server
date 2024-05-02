@@ -47,7 +47,8 @@ app.post('/api/scores', (request, response) => {
 	}
 
 	const score = new Score({
-		score: body.score
+		score: body.score,
+		name: body.name || 'anonymous'
 	})
 
 	score.save().then(savedScore => {
