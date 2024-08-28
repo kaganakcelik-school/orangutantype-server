@@ -42,7 +42,7 @@ app.get('/api/scores', (request, response) => {
 app.post('/api/scores', (request, response) => {
 	const body = request.body
 
-	if (body.score === undefined) {
+	if (body.score === undefined || body.score === null) {
 		return response.status(400).json({ error: 'score missing' })
 	}
 
